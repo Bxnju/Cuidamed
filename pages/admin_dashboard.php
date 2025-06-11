@@ -144,6 +144,45 @@ $historial = array_reverse($historial);
             margin: 1em 0;
             color: white;
             font-weight: bold;
+            min-width: 300px;
+            max-width: 400px;
+            flex-shrink: 0;
+            /* Esto evita que el item se reduzca */
+        }
+
+        @media screen and (max-width: 900px) {
+
+            .container {
+                width: 90%;
+                box-shadow: 0 10px 25px rgba(0, 123, 190, 0.2);
+            }
+
+            .logo {
+                width: 100%;
+                max-width: 600px;
+                margin-bottom: 20px;
+            }
+
+            .flex-columns section ul {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-y: auto;
+                gap: 1em;
+            }
+
+            .event-item {
+                font-size: 1em;
+                width: 100%;
+            }
+
+            .medicine {
+                min-width: 200px;
+            }
+
+            div:has(.medicine) h2{
+                font-size: 1.4em;
+                margin-top: 2em;
+            }
         }
     </style>
 </head>
@@ -151,7 +190,7 @@ $historial = array_reverse($historial);
 <body>
 
 
-    <img src="../assets/logo.png" alt="Cuidamed Logo">
+    <img class="logo" src="../assets/logo.png" alt="Cuidamed Logo">
 
     <div class="container">
 
@@ -235,7 +274,7 @@ $historial = array_reverse($historial);
                 <?php if (count($medicamentos) > 0): ?>
                     <div>
                         <?php foreach ($medicamentos as $medicamento): ?>
-                            <div class="event-item">
+                            <div class="event-item medicine">
                                 <strong>Nombre:</strong> <?php echo htmlspecialchars($medicamento['nombre']); ?><br>
                                 <strong>Descripción:</strong> <?php echo htmlspecialchars($medicamento['descripcion']); ?><br>
                             </div>
