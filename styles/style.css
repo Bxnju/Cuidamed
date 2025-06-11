@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+  --color-bg: #121c2c;
+  --color-bg-alt: #1b2944;
+  --color-primary: #3a84ff;
+  --color-primary-light: #66a3ff;
+  --color-text: #e0e6f0;
+  --color-text-muted: #a0a8bf;
+  --color-error: #ff5555;
+  --color-border: #2a3a5a;
+  --font-family: "Poppins", sans-serif;
+  --font-family-heading: "Oswald", sans-serif;
+}
+
+/* Scrollbar para navegadores basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Fondo de la barra de scroll */
+::-webkit-scrollbar-track {
+  background: #d0e8f5;
+  border-radius: 10px;
+}
+
+/* Color del "thumb" (la parte que se desplaza) */
+::-webkit-scrollbar-thumb {
+  background: #2c6f91;
+  border-radius: 10px;
+}
+
+/* Hover del thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #255d78;
+}
+
+html {
+  scrollbar-color: #2c6f91 #d0e8f5;
+  scrollbar-width: thin;
+}
+
+/* Body */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family) !important;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+}
+
+/* Container */
+.container {
+  background-color: var(--color-bg-alt);
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos */
+h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-primary-light);
+}
+
+/* Form */
+form.form-recordatorio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Labels */
+label,
+legend {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: var(--color-text);
+}
+
+/* Inputs y select */
+input[type="date"],
+input[type="time"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary-light);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+/* Checkbox group */
+.checkbox-group {
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 0.4rem;
+  accent-color: var(--color-primary);
+}
+
+/* Botones */
+.btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  display: inline-block;
+  text-decoration: none;
+  justify-self: center;
+  align-self: center;
+}
+
+.btn_volver {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  margin-bottom: 2em;
+}
+
+.btn_volver:hover,
+.btn_volver:focus {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-color: var(--color-primary);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-primary-light);
+  outline: none;
+}
+
+/* Link botón */
+a.btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  body {
+    padding: 1rem;
+    align-items: center;
+  }
+  .container {
+    padding: 1.5rem 1.5rem;
+    max-width: 100%;
+  }
+  .checkbox-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
