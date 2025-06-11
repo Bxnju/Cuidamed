@@ -73,7 +73,9 @@ y la organización de sus tratamientos.</pre>
   <h2>🔒 Licencia</h2>
 
   <pre>
-Este proyecto está bajo la licencia MIT.
+© Bxnju 2025.  
+Todos los derechos reservados.  
+No se concede ningún derecho de patente ni licencia de uso comercial salvo autorización expresa y por escrito.
   </pre>
 
 </div>
