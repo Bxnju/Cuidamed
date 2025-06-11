@@ -150,6 +150,10 @@ $historial = array_reverse($historial);
             /* Esto evita que el item se reduzca */
         }
 
+        .medicine {
+            max-width:100%;
+        }
+
         @media screen and (max-width: 900px) {
 
             .container {
