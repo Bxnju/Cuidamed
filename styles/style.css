@@ -51,7 +51,12 @@ html {
 
 /* Body */
 body {
-  background-color: var(--color-bg);
+  background: linear-gradient(
+      135deg,
+      rgba(58, 132, 255, 0.1),
+      rgba(58, 132, 255, 0.2)
+    ),
+    url("../assets/page_bg.png") no-repeat center center/cover fixed;
   color: var(--color-text);
   font-family: var(--font-family) !important;
   min-height: 100vh;
@@ -65,7 +70,8 @@ body {
 
 /* Container */
 .container {
-  background-color: var(--color-bg-alt);
+  background-color: rgba(27, 41, 68, 0.3);
+  backdrop-filter: blur(10px);
   padding: 2rem 2.5rem;
   border-radius: 10px;
   width: 100%;
