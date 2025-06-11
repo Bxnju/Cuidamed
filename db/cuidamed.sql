@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-06-2025 a las 10:16:37
+-- Tiempo de generación: 11-06-2025 a las 09:11:09
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -101,7 +101,10 @@ CREATE TABLE `recordatorios` (
 INSERT INTO `recordatorios` (`id_recordatorio`, `id_usuario`, `id_medicamento`, `fecha_hora`, `dosis`, `creado_por_admin`) VALUES
 (13, 4, 38, '2025-06-10 16:00:00', 'Una pastilla', 0),
 (14, 4, 38, '2025-06-11 16:00:00', 'Una pastilla', 0),
-(15, 4, 38, '2025-06-17 16:00:00', 'Una pastilla', 0);
+(15, 4, 38, '2025-06-17 16:00:00', 'Una pastilla', 0),
+(17, 4, 38, '2025-06-13 15:15:00', '1 tableta', 0),
+(18, 4, 38, '2025-06-14 15:15:00', '1 tableta', 0),
+(19, 4, 37, '2025-06-10 14:02:00', 'Una pastilla', 0);
 
 -- --------------------------------------------------------
 
@@ -123,7 +126,10 @@ CREATE TABLE `tomas_medicamento` (
 INSERT INTO `tomas_medicamento` (`id_toma`, `id_recordatorio`, `estado`, `fecha_registro`) VALUES
 (5, 13, 'tomado', '2025-06-10 02:53:01'),
 (6, 14, 'pendiente', '2025-06-10 02:53:01'),
-(7, 15, 'pendiente', '2025-06-10 02:53:01');
+(7, 15, 'pendiente', '2025-06-10 02:53:01'),
+(9, 17, 'pendiente', '2025-06-10 11:00:33'),
+(10, 18, 'pendiente', '2025-06-10 11:00:33'),
+(11, 19, 'tomado', '2025-06-10 11:04:37');
 
 -- --------------------------------------------------------
 
@@ -194,13 +200,13 @@ ALTER TABLE `medicamentos`
 -- AUTO_INCREMENT de la tabla `recordatorios`
 --
 ALTER TABLE `recordatorios`
-  MODIFY `id_recordatorio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_recordatorio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `tomas_medicamento`
 --
 ALTER TABLE `tomas_medicamento`
-  MODIFY `id_toma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_toma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
