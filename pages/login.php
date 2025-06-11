@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../styles/style.css">
     <style>
         .container {
-            background: rgba(0, 19, 68, 0.95);
+            background-color: rgba(27, 41, 68, 0.3);
+            backdrop-filter: blur(10px);
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0, 123, 190, 0.2);
