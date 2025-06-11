@@ -2,8 +2,8 @@
 
   <img src="https://i.imgur.com/lqz6gkS.png" alt="Cuidamed Logo" width="600"/>
 
-  <pre><b>Cuidamed</b> es una plataforma web diseñada para gestionar medicamentos y recordatorios de manera eficiente.  
-Este proyecto está enfocado en mejorar la calidad de vida de los pacientes mediante la automatización de notificaciones  
+  <pre><b>Cuidamed</b> es una plataforma web diseñada para gestionar medicamentos y recordatorios de manera eficiente. 
+    Este proyecto está enfocado en mejorar la calidad de vida de los pacientes mediante la automatización de notificaciones  
 y la organización de sus tratamientos.</pre>
 
   <br><br>
