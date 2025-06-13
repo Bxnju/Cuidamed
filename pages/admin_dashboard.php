@@ -240,10 +240,15 @@ $historial = array_reverse($historial);
                     ?>
                     <?php if (count($clientes) > 0): ?>
                         <?php foreach ($clientes as $cliente): ?>
-                            <div class="cliente-item">
+                            <div class="cliente-item" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                <div class="datos">
                                 <strong>Nombre:</strong> <?php echo htmlspecialchars($cliente['nombre']); ?><br>
                                 <strong>Correo:</strong> <?php echo htmlspecialchars($cliente['correo']); ?><br>
                                 <strong>Teléfono:</strong> <?php echo htmlspecialchars($cliente['telefono']); ?><br>
+                                </div>
+                                <a class="btn" href="../php/descargar_recordatorios.php?id_usuario=<?php echo $cliente['id_usuario']; ?>">
+                                    Descargar Recordatorios
+                                </a>
                             </div>
                         <?php endforeach; ?>
                     <?php else: ?>
