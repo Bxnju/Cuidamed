@@ -48,7 +48,7 @@ y la organización de sus tratamientos.</pre>
 
   <pre>
 1️⃣ Clona este repositorio:  
-   git clone https://github.com/tuusuario/cuidamed.git  
+   git clone https://github.com/bxnju/cuidamed.git  
 
 2️⃣ Importa el archivo SQL en tu base de datos:  
    db/cuidamed.sql  
